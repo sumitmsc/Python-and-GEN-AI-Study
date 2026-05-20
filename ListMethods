@@ -1,0 +1,145 @@
+# ==========================================
+# Python List Methods Practice
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+# ==========================================
+# Basic List Operations
+# ==========================================
+
+# Creating a list
+lists = [1, 2, 3, 4, 5]
+
+# Insert value 44 at index 3
+lists.insert(3, 44)
+
+print("List after insert():", lists)
+
+# OUTPUT:
+# List after insert(): [1, 2, 3, 44, 4, 5]
+
+
+# Remove element using pop(index)
+lists.pop(3)
+
+print("List after pop():", lists)
+
+# OUTPUT:
+# List after pop(): [1, 2, 3, 4, 5]
+
+
+# Remove specific value
+lists.remove(5)
+
+print("List after remove():", lists)
+
+# OUTPUT:
+# List after remove(): [1, 2, 3, 4]
+
+
+# Append new value at end
+lists.append(6)
+
+print("List after append():", lists)
+
+# OUTPUT:
+# List after append(): [1, 2, 3, 4, 6]
+
+
+# Find index of value 6
+index_value_6 = lists.index(6)
+
+print("Index value of 6 is:", index_value_6)
+
+# OUTPUT:
+# Index value of 6 is: 4
+
+
+# ==========================================
+# Sorting List
+# ==========================================
+
+un_lists = [33, 22, 6, 7, 8, 54, 4, 2]
+
+print("\nUnsorted list is:", un_lists)
+
+# OUTPUT:
+# Unsorted list is: [33, 22, 6, 7, 8, 54, 4, 2]
+
+
+# ==========================================
+# Incorrect Way of Sorting
+# ==========================================
+
+# sorted_lists = un_lists.sort()
+
+# It will NOT work because sort()
+# modifies the original list directly
+# and returns None
+
+# OUTPUT:
+# Sorted list is : None
+
+
+# ==========================================
+# Correct Way using sort()
+# ==========================================
+
+un_lists.sort()
+
+print("Sorted list using sort():", un_lists)
+
+# OUTPUT:
+# Sorted list using sort(): [2, 4, 6, 7, 8, 22, 33, 54]
+
+
+# ==========================================
+# Using sorted() Method
+# ==========================================
+
+# sorted() returns a new sorted list
+sorted_list = sorted(un_lists)
+
+print("Sorted list using sorted():", sorted_list)
+
+# OUTPUT:
+# Sorted list using sorted(): [2, 4, 6, 7, 8, 22, 33, 54]
+
+
+# ==========================================
+# Count Method
+# ==========================================
+
+count_4 = sorted_list.count(4)
+
+print("Occurrence of 4 in sorted list is:", count_4)
+
+# OUTPUT:
+# Occurrence of 4 in sorted list is: 1
+
+
+# ==========================================
+# Reverse Method
+# ==========================================
+
+sorted_list.reverse()
+
+print("Reverse of sorted list is:", sorted_list)
+
+# OUTPUT:
+# Reverse of sorted list is:
+# [54, 33, 22, 8, 7, 6, 4, 2]
+
+
+# ==========================================
+# Clear Method
+# ==========================================
+
+sorted_list.clear()
+
+print("Sorted list after clear():", sorted_list)
+
+# OUTPUT:
+# Sorted list after clear(): []
