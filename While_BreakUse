@@ -1,0 +1,108 @@
+# ==========================================
+# Python While Loop and Control Statements
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+# ==========================================
+# Printing Even Numbers using while loop
+# ==========================================
+
+print("Even numbers from 0 to 50:\n")
+
+i = 0
+
+while i <= 50:
+
+    # Check even number
+    if i % 2 == 0:
+        print(i)
+
+    i = i + 1
+
+
+# OUTPUT:
+# 0
+# 2
+# 4
+# ...
+# 50
+
+
+# ==========================================
+# Using Pass Statement
+# ==========================================
+
+print("\nUsing Pass Statement:\n")
+
+i = 0
+
+while i <= 50:
+
+    if i % 2 == 0:
+        print(i)
+
+    else:
+        # pass does nothing
+        pass
+
+    i = i + 1
+
+
+# OUTPUT:
+# 0
+# 2
+# 4
+# ...
+# 50
+
+
+# ==========================================
+# Using Break Statement with while loop
+# ==========================================
+
+print("\nBreak Statement using while loop:\n")
+
+i = 0
+
+while i <= 50:
+
+    # Stop loop when i becomes 18
+    if i == 18:
+        break
+
+    print(i)
+
+    i = i + 1
+
+
+# OUTPUT:
+# 0
+# 1
+# 2
+# ...
+# 17
+
+
+# ==========================================
+# Using Break Statement with for loop
+# ==========================================
+
+print("\nBreak Statement using for loop:\n")
+
+for i in range(51):
+
+    # Terminate loop at 18
+    if i == 18:
+        break
+
+    print(i)
+
+
+# OUTPUT:
+# 0
+# 1
+# 2
+# ...
+# 17
