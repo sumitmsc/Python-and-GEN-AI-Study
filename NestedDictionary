@@ -1,0 +1,79 @@
+# ==========================================
+# Nested Dictionary Example in Python
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+# ==========================================
+# Creating Nested Dictionary
+# ==========================================
+
+# Student data stored in nested dictionary
+
+student_dict = {
+
+    "Std1": {
+        "Name": "Amit",
+        "Marks": 84,
+        "Class": "A"
+    },
+
+    "Std2": {
+        "Name": "Sumit",
+        "Marks": 94,
+        "Class": "A+"
+    },
+
+    "Std3": {
+        "Name": "Jimit",
+        "Marks": 98,
+        "Class": "A+"
+    }
+}
+
+# Print complete dictionary
+print("Student Dictionary:\n")
+
+print(student_dict)
+
+# OUTPUT:
+# {
+#   'Std1': {'Name': 'Amit', 'Marks': 84, 'Class': 'A'},
+#   'Std2': {'Name': 'Sumit', 'Marks': 94, 'Class': 'A+'},
+#   'Std3': {'Name': 'Jimit', 'Marks': 98, 'Class': 'A+'}
+# }
+
+
+# ==========================================
+# Iterating Nested Dictionary using Loops
+# ==========================================
+
+print("\n===== Iterating Nested Dictionary =====")
+
+for outer_key, outer_value in student_dict.items():
+
+    print(f"\nOuter Key : {outer_key}")
+    print(f"Outer Value : {outer_value}")
+
+    # Iterating inner dictionary
+    for inner_key, inner_value in outer_value.items():
+
+        print(f"{inner_key} : {inner_value}")
+
+
+# SAMPLE OUTPUT:
+#
+# Outer Key : Std1
+# Outer Value : {'Name': 'Amit', 'Marks': 84, 'Class': 'A'}
+#
+# Name : Amit
+# Marks : 84
+# Class : A
+#
+# Outer Key : Std2
+# Outer Value : {'Name': 'Sumit', 'Marks': 94, 'Class': 'A+'}
+#
+# Name : Sumit
+# Marks : 94
+# Class : A+
