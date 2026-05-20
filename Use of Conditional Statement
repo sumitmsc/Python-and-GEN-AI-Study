@@ -1,0 +1,53 @@
+# ==========================================
+# Python Conditional Statements Example
+# Find tallest friend using if...elif...else
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+# ==========================================
+# Taking Input from User
+# ==========================================
+
+amit_height = int(input("Please enter height of Amit in cms : "))
+sumit_height = int(input("Please enter height of Sumit in cms : "))
+jimit_height = int(input("Please enter height of Jimit in cms : "))
+
+
+# ==========================================
+# Conditional Statements
+# ==========================================
+
+# Check if Amit is tallest
+if amit_height > sumit_height and amit_height > jimit_height:
+
+    print(f"Height of Amit ({amit_height} cm) "
+          f"is greater than all friends.")
+
+
+# Check if Sumit is tallest
+elif sumit_height > amit_height and sumit_height > jimit_height:
+
+    print(f"Height of Sumit ({sumit_height} cm) "
+          f"is greater than all friends.")
+
+
+# Otherwise Jimit is tallest
+else:
+
+    print(f"Height of Jimit ({jimit_height} cm) "
+          f"is greater than all friends.")
+
+
+# ==========================================
+# SAMPLE INPUT / OUTPUT
+# ==========================================
+
+# INPUT:
+# Amit  = 170
+# Sumit = 182
+# Jimit = 176
+
+# OUTPUT:
+# Height of Sumit (182 cm) is greater than all friends.
