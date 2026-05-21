@@ -1,0 +1,92 @@
+# ==========================================
+# Python Complex Numbers Example
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+# ==========================================
+# Creating Complex Numbers
+# ==========================================
+
+# Complex number format:
+# real + imaginary(j)
+
+complex_num = 4 + 5j
+
+print("Complex Number is:", complex_num)
+
+# OUTPUT:
+# Complex Number is: (4+5j)
+
+
+# ==========================================
+# Checking Data Type
+# ==========================================
+
+print("\nData Type of complex_num:")
+
+print(type(complex_num))
+
+# OUTPUT:
+# <class 'complex'>
+
+
+# ==========================================
+# Accessing Real and Imaginary Parts
+# ==========================================
+
+print("\nReal and Imaginary Parts")
+
+print("Real Part :", complex_num.real)
+print("Imaginary Part :", complex_num.imag)
+
+# OUTPUT:
+# Real Part : 4.0
+# Imaginary Part : 5.0
+
+
+# ==========================================
+# Complex Number Operations
+# ==========================================
+
+a = 2 + 3j
+b = 1 + 2j
+
+print("\nComplex Number Operations")
+
+# Addition
+print("Addition :", a + b)
+
+# OUTPUT:
+# Addition : (3+5j)
+
+
+# Subtraction
+print("Subtraction :", a - b)
+
+# OUTPUT:
+# Subtraction : (1+1j)
+
+
+# Multiplication
+print("Multiplication :", a * b)
+
+# OUTPUT:
+# Multiplication : (-4+7j)
+
+
+# ==========================================
+# Important Notes
+# ==========================================
+
+# j represents imaginary number in Python
+# Python provides built-in support for
+# complex numbers using complex data type
+
+# Complex numbers are used in:
+# ✔ Mathematics
+# ✔ Signal Processing
+# ✔ AI & Scientific Computing
+# ✔ Electrical Engineering
+# ✔ Quantum Physics
