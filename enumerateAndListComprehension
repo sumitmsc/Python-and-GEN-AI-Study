@@ -1,0 +1,143 @@
+# ==========================================
+# Python Enumerate and List Comprehension
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+
+# ==========================================
+# Enumerate Function Example
+# ==========================================
+
+print("Using enumerate() Function\n")
+
+numbers_list = [1, 2, 3, 4, 5,
+                6, 7, 8, 9, 10,
+                11, 12, 13, 14, 15]
+
+# enumerate() gives both index and value
+
+for index, value in enumerate(numbers_list):
+
+    print(index, value)
+
+
+# SAMPLE OUTPUT:
+# 0 1
+# 1 2
+# 2 3
+# ...
+# 14 15
+
+
+# ==========================================
+# List Comprehension
+# ==========================================
+
+"""
+List Comprehension is a short and powerful
+way to create lists in Python.
+
+Instead of writing loops in multiple lines,
+we can create lists in a single line.
+"""
+
+print("\nList Comprehension Example\n")
+
+# Creating even numbers list
+even_list = [x for x in range(21) if x % 2 == 0]
+
+print("Even numbers using list comprehension:")
+
+print(even_list)
+
+# OUTPUT:
+# [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+
+# ==========================================
+# Traditional Method without
+# List Comprehension
+# ==========================================
+
+print("\nTraditional Method without List Comprehension\n")
+
+traditional_list = []
+
+for i in range(21):
+
+    if i % 2 == 0:
+
+        traditional_list.append(i)
+
+print(traditional_list)
+
+# OUTPUT:
+# [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+
+# ==========================================
+# Square Numbers using
+# List Comprehension
+# ==========================================
+
+print("\nSquare Numbers\n")
+
+square_list = [x**2 for x in range(1, 6)]
+
+print(square_list)
+
+# OUTPUT:
+# [1, 4, 9, 16, 25]
+
+
+# ==========================================
+# Even Numbers Example
+# ==========================================
+
+print("\nEven Numbers Example\n")
+
+even_numbers = [x for x in range(1, 11)
+                if x % 2 == 0]
+
+print(even_numbers)
+
+# OUTPUT:
+# [2, 4, 6, 8, 10]
+
+
+# ==========================================
+# List Comprehension Structure
+# ==========================================
+
+"""
+General Syntax:
+
+[expression for item in iterable if condition]
+
+Where:
+
+expression -> operation to perform
+
+item -> variable
+
+iterable -> list/range/string etc.
+
+condition -> optional filtering condition
+"""
+
+
+# ==========================================
+# Importance of List Comprehension
+# ==========================================
+
+"""
+List Comprehension is widely used in:
+
+✅ Automation
+✅ Data Science
+✅ AI / Machine Learning
+✅ Backend Development
+✅ Software Testing Automation
+"""
