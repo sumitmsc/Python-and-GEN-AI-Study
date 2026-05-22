@@ -1,0 +1,225 @@
+# Python Tuples, Packing, Unpacking & Nested Data Structures
+
+## Overview
+
+This project demonstrates important Python concepts including:
+
+* Tuples
+* Tuple methods
+* Tuple packing and unpacking
+* Nested lists
+* Nested tuples
+* Accessing nested elements
+* Data type checking
+
+These concepts are very useful in:
+
+* Automation Testing
+* Selenium Framework Development
+* API Response Handling
+* Data Processing
+* Python Programming Fundamentals
+* AI/ML Data Preprocessing
+
+---
+
+# Python Program
+
+```python
+# Tuple Examples
+
+tuple1 = (1, 2, 3, 4, 5)
+print("Tuple 1:", tuple1)
+
+tuple2 = (6, 7, 8, 9, 10)
+print("Tuple 2:", tuple2)
+
+# Concatenation of tuples
+
+tup3 = tuple1 + tuple2
+print("Combined Tuple:", tup3)
+
+# Tuple Methods
+
+tup1_data = tuple1.index(4)
+print("Index of value 4 in tuple1:", tup1_data)
+
+tup2_count = tuple1.count(4)
+print("Count of value 4 in tuple1:", tup2_count)
+
+# Packing of Tuples
+
+a = 1, 2, 3, 4, 5, 6, 7
+print("Packed Tuple:", a)
+
+# Unpacking of Tuples
+
+a, b, c, d, e, f, g, h = 1, 2, 3, 4, 5, 6, 7, 8
+
+print("Unpacked Values:")
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+print(g)
+print(h)
+
+# Unpacking using *
+a, *b, c = 1, 2, 3, 4, 5, 6, 7, 8
+
+print("First Value:", a)
+print("Middle Values:", b)
+print("Last Value:", c)
+
+# Nested List
+Nested_list = [
+    [1, 2, 3, "a", "b", "c", True],
+    [4, 5, 6, "d", "e", "f", False],
+    [7, 8, 9, "g", "h", "i", True]
+]
+
+print("Nested List:", Nested_list)
+print("First List:", Nested_list[0])
+print("Second List:", Nested_list[1])
+print("Third List:", Nested_list[2])
+
+# Accessing nested element
+print("Boolean value from third list:", Nested_list[2][6])
+
+# Nested Tuples inside a List
+Nested_tuple_inList = [
+    (1, 2, 3, 3, 3, "a", "b", "c", True),
+    (4, 5, 6, "d", "e", "f", False),
+    (7, 8, 9, "g", "h", "i", True)
+]
+
+print("Nested Tuples in List:", Nested_tuple_inList)
+print(Nested_tuple_inList[0])
+print(Nested_tuple_inList[1])
+print(Nested_tuple_inList[2])
+
+# Nested Tuples
+Nested_tuples = (
+    (1, 2, 3, 3, 3, "a", "b", "c", True),
+    (4, 5, 6, "d", "e", "f", False),
+    (7, 8, 9, "g", "h", "i", True)
+)
+
+# Checking Data Types
+print(type(Nested_tuple_inList[0]))
+print(type(Nested_tuple_inList[1]))
+print(type(Nested_tuple_inList[2]))
+```
+
+---
+
+# Key Concepts Explained
+
+## 1. Tuple
+
+A tuple is an ordered and immutable collection in Python.
+
+Example:
+
+```python
+tuple1 = (1, 2, 3)
+```
+
+---
+
+## 2. Tuple Methods
+
+### index()
+
+Returns the index position of a value.
+
+```python
+tuple1.index(4)
+```
+
+### count()
+
+Returns how many times a value appears.
+
+```python
+tuple1.count(4)
+```
+
+---
+
+## 3. Tuple Packing
+
+Packing means storing multiple values into a tuple.
+
+```python
+a = 1, 2, 3
+```
+
+---
+
+## 4. Tuple Unpacking
+
+Unpacking means assigning tuple values into variables.
+
+```python
+a, b, c = (1, 2, 3)
+```
+
+---
+
+## 5. Unpacking Using *
+
+The `*` operator helps collect multiple values into a list.
+
+```python
+a, *b, c = 1, 2, 3, 4, 5
+```
+
+---
+
+## 6. Nested List
+
+A nested list is a list inside another list.
+
+```python
+Nested_list = [[1,2],[3,4]]
+```
+
+---
+
+## 7. Nested Tuple
+
+A nested tuple contains tuples inside another tuple.
+
+```python
+Nested_tuples = ((1,2),(3,4))
+```
+
+---
+
+# Applications in Real World
+
+These concepts are commonly used in:
+
+* Selenium Automation Frameworks
+* API Testing
+* Database Result Handling
+* AI/ML Data Preparation
+* Data Analysis
+* Python Backend Development
+
+---
+
+# Author
+
+**Sumit Shrivastav**
+
+* Software Testing Professional
+* Python & Automation Enthusiast
+* AI & ML Learner
+
+GitHub Repository:
+
+Add your GitHub repository link here.
