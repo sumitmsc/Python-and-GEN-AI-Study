@@ -1,0 +1,91 @@
+# ==========================================
+# Python Nested List Comprehension Example
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+
+# ==========================================
+# Creating Two Lists
+# ==========================================
+
+list1 = [1, 2, 3, 4]
+
+list2 = [5, 6, 7, 8]
+
+
+# ==========================================
+# Nested List Comprehension
+# ==========================================
+
+# Creating pair combinations from both lists
+
+paired_list = [[i, j] for i in list1 for j in list2]
+
+
+# ==========================================
+# Printing Data
+# ==========================================
+
+print("List 1 Data :", list1)
+
+print("List 2 Data :", list2)
+
+print("Paired List Data :\n", paired_list)
+
+
+# OUTPUT:
+#
+# List 1 Data : [1, 2, 3, 4]
+#
+# List 2 Data : [5, 6, 7, 8]
+#
+# Paired List Data :
+#
+# [
+#   [1, 5], [1, 6], [1, 7], [1, 8],
+#   [2, 5], [2, 6], [2, 7], [2, 8],
+#   [3, 5], [3, 6], [3, 7], [3, 8],
+#   [4, 5], [4, 6], [4, 7], [4, 8]
+# ]
+
+
+# ==========================================
+# Understanding the Logic
+# ==========================================
+
+"""
+General Syntax:
+
+[expression for item1 in list1 for item2 in list2]
+
+Where:
+
+i -> item from list1
+j -> item from list2
+
+This creates all possible combinations
+between both lists.
+"""
+
+
+# ==========================================
+# Equivalent Traditional Loop
+# ==========================================
+
+traditional_pairs = []
+
+for i in list1:
+
+    for j in list2:
+
+        traditional_pairs.append([i, j])
+
+print("\nUsing Traditional Nested Loop :")
+
+print(traditional_pairs)
+
+
+# OUTPUT:
+# Same result as list comprehension
