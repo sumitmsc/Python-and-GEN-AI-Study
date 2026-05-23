@@ -1,0 +1,295 @@
+# Python Set Methods with Examples
+
+## Introduction
+
+In Python, a **set** is an unordered collection of unique elements. Sets are useful when you want to:
+
+* Remove duplicate values
+* Perform mathematical set operations
+* Store unique items efficiently
+* Compare collections of data
+
+Example:
+
+```python
+set1 = {1, 2, 3, 4}
+print(set1)
+```
+
+---
+
+# Common Python Set Methods
+
+| Method                   | Description                              |
+| ------------------------ | ---------------------------------------- |
+| `add()`                  | Adds one element to the set              |
+| `update()`               | Adds multiple elements                   |
+| `remove()`               | Removes an element                       |
+| `discard()`              | Removes element without error            |
+| `pop()`                  | Removes a random element                 |
+| `clear()`                | Removes all elements                     |
+| `copy()`                 | Creates a copy of set                    |
+| `union()`                | Combines two sets                        |
+| `intersection()`         | Returns common elements                  |
+| `difference()`           | Returns different elements               |
+| `symmetric_difference()` | Returns non-common elements              |
+| `issubset()`             | Checks subset relationship               |
+| `issuperset()`           | Checks superset relationship             |
+| `isdisjoint()`           | Checks whether sets have common elements |
+
+---
+
+# 1. add()
+
+Adds a single element to the set.
+
+```python
+set1 = {1, 2, 3}
+
+set1.add(4)
+
+print(set1)
+```
+
+### Output
+
+```python
+{1, 2, 3, 4}
+```
+
+---
+
+# 2. update()
+
+Adds multiple elements to the set.
+
+```python
+set1 = {1, 2}
+
+set1.update([3, 4, 5])
+
+print(set1)
+```
+
+### Output
+
+```python
+{1, 2, 3, 4, 5}
+```
+
+---
+
+# 3. remove()
+
+Removes an element from the set.
+
+```python
+set1 = {1, 2, 3}
+
+set1.remove(2)
+
+print(set1)
+```
+
+### Output
+
+```python
+{1, 3}
+```
+
+---
+
+# 4. discard()
+
+Removes an element without throwing an error.
+
+```python
+set1 = {1, 2, 3}
+
+set1.discard(5)
+
+print(set1)
+```
+
+### Output
+
+```python
+{1, 2, 3}
+```
+
+---
+
+# 5. pop()
+
+Removes a random element.
+
+```python
+set1 = {10, 20, 30}
+
+value = set1.pop()
+
+print(value)
+print(set1)
+```
+
+---
+
+# 6. union()
+
+Combines multiple sets.
+
+```python
+set1 = {1, 2}
+set2 = {3, 4}
+
+result = set1.union(set2)
+
+print(result)
+```
+
+### Output
+
+```python
+{1, 2, 3, 4}
+```
+
+---
+
+# 7. intersection()
+
+Returns common elements.
+
+```python
+set1 = {1, 2, 3}
+set2 = {2, 3, 4}
+
+print(set1.intersection(set2))
+```
+
+### Output
+
+```python
+{2, 3}
+```
+
+---
+
+# 8. difference()
+
+Returns elements present only in the first set.
+
+```python
+set1 = {1, 2, 3}
+set2 = {2, 4}
+
+print(set1.difference(set2))
+```
+
+### Output
+
+```python
+{1, 3}
+```
+
+---
+
+# 9. symmetric_difference()
+
+Returns non-common elements.
+
+```python
+set1 = {1, 2, 3}
+set2 = {2, 4}
+
+print(set1.symmetric_difference(set2))
+```
+
+### Output
+
+```python
+{1, 3, 4}
+```
+
+---
+
+# 10. clear()
+
+Removes all elements from the set.
+
+```python
+set1 = {1, 2, 3}
+
+set1.clear()
+
+print(set1)
+```
+
+### Output
+
+```python
+set()
+```
+
+---
+
+# Important Properties of Sets
+
+* Sets store unique values only
+* Duplicate values are removed automatically
+* Sets are unordered
+* Sets are mutable
+* Sets do not support indexing
+
+Example:
+
+```python
+set1 = {1, 1, 2, 3}
+
+print(set1)
+```
+
+### Output
+
+```python
+{1, 2, 3}
+```
+
+---
+
+# Real-Time Example
+
+```python
+employees = {"Sumit", "Rahul", "Sneha"}
+
+new_employees = {"Priti", "Rahul"}
+
+all_employees = employees.union(new_employees)
+
+print(all_employees)
+```
+
+---
+
+# Applications of Python Sets
+
+Python sets are widely used in:
+
+* Automation Testing
+* Data Analysis
+* AI/ML Data Preprocessing
+* Removing duplicate records
+* Log validation
+* Comparing datasets
+* User access management
+
+---
+
+# Conclusion
+
+Python set methods help developers efficiently manage unique collections of data and perform mathematical operations easily. Understanding set operations is highly useful in real-world software development, automation testing, and AI/ML projects.
+
+---
+
+## Author
+
+**Sumit Shrivastav**
