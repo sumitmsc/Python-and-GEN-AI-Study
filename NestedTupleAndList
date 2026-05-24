@@ -1,0 +1,171 @@
+# ==========================================
+# Python Nested Tuples and Nested Lists
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+
+# ==========================================
+# Nested Tuple Example
+# ==========================================
+
+print("===== Nested Tuple Example =====\n")
+
+# Creating nested tuple
+nested_tuple = [
+    (1, 2, 3),
+    (4, 5, 6),
+    (7, 8, 9)
+]
+
+print("Complete Nested Tuple:")
+
+print(nested_tuple)
+
+# OUTPUT:
+# [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+
+
+# ==========================================
+# Accessing Individual Tuples
+# ==========================================
+
+print("\nAccessing Individual Tuples\n")
+
+# Access all elements from 0th index tuple
+print(nested_tuple[0][:])
+
+# OUTPUT:
+# (1, 2, 3)
+
+
+# Access all elements from 1st index tuple
+print(nested_tuple[1][:])
+
+# OUTPUT:
+# (4, 5, 6)
+
+
+# Access all elements from 2nd index tuple
+print(nested_tuple[2][:])
+
+# OUTPUT:
+# (7, 8, 9)
+
+
+# ==========================================
+# Accessing First Element
+# from Each Tuple
+# ==========================================
+
+print("\nFirst Element from Each Tuple\n")
+
+print(nested_tuple[0][0])
+
+# OUTPUT:
+# 1
+
+print(nested_tuple[1][0])
+
+# OUTPUT:
+# 4
+
+print(nested_tuple[2][0])
+
+# OUTPUT:
+# 7
+
+
+# ==========================================
+# Nested List Example
+# ==========================================
+
+print("\n===== Nested List Example =====\n")
+
+# Creating nested list
+nested_lists = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+print("Complete Nested List:")
+
+print(nested_lists)
+
+# OUTPUT:
+# [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+
+# ==========================================
+# Accessing Individual Lists
+# ==========================================
+
+print("\nAccessing Individual Lists\n")
+
+# Access all elements from 0th index list
+print(nested_lists[0][:])
+
+# OUTPUT:
+# [1, 2, 3]
+
+
+# Access all elements from 1st index list
+print(nested_lists[1][:])
+
+# OUTPUT:
+# [4, 5, 6]
+
+
+# Access all elements from 2nd index list
+print(nested_lists[2][:])
+
+# OUTPUT:
+# [7, 8, 9]
+
+
+# ==========================================
+# Accessing First Element
+# from Each List
+# ==========================================
+
+print("\nFirst Element from Each List\n")
+
+print(nested_lists[0][0])
+
+# OUTPUT:
+# 1
+
+print(nested_lists[1][0])
+
+# OUTPUT:
+# 4
+
+print(nested_lists[2][0])
+
+# OUTPUT:
+# 7
+
+
+# ==========================================
+# Important Learning
+# ==========================================
+
+"""
+Nested Data Structures allow us to store
+multiple collections inside another collection.
+
+Tuple Syntax:
+(index_of_tuple)(index_of_element)
+
+List Syntax:
+[index_of_list][index_of_element]
+
+Used in:
+✅ Data Science
+✅ AI / Machine Learning
+✅ Matrix Operations
+✅ Game Development
+✅ Backend Development
+"""
