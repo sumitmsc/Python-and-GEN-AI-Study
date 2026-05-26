@@ -1,0 +1,263 @@
+# ==========================================
+# Python Set Methods Practice
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+
+# ==========================================
+# Creating a Set
+# ==========================================
+
+# Sets store only unique values
+
+set_data = {1, 2, 3, 4, 5, 5, 6, 6}
+
+print("Original Set Data :")
+
+print(set_data)
+
+# OUTPUT:
+# {1, 2, 3, 4, 5, 6}
+
+
+# ==========================================
+# add() Method
+# ==========================================
+
+print("\nUsing add() Method")
+
+# Add single element
+set_data.add(7)
+
+print(set_data)
+
+# OUTPUT:
+# {1, 2, 3, 4, 5, 6, 7}
+
+
+# ==========================================
+# update() Method
+# ==========================================
+
+print("\nUsing update() Method")
+
+# Add multiple elements
+set_data.update([8, 9, 10])
+
+print(set_data)
+
+# OUTPUT:
+# {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+
+# ==========================================
+# remove() Method
+# ==========================================
+
+print("\nUsing remove() Method")
+
+# Removes specified element
+set_data.remove(10)
+
+print(set_data)
+
+# OUTPUT:
+# {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+
+# ==========================================
+# discard() Method
+# ==========================================
+
+print("\nUsing discard() Method")
+
+# discard() does not throw error
+# if element does not exist
+
+set_data.discard(100)
+
+print(set_data)
+
+# OUTPUT:
+# No Error Generated
+
+
+# ==========================================
+# pop() Method
+# ==========================================
+
+print("\nUsing pop() Method")
+
+# Removes random element
+removed_item = set_data.pop()
+
+print("Removed Item :", removed_item)
+
+print("Updated Set :", set_data)
+
+# OUTPUT:
+# Random element removed
+
+
+# ==========================================
+# clear() Method
+# ==========================================
+
+temp_set = {1, 2, 3}
+
+print("\nUsing clear() Method")
+
+temp_set.clear()
+
+print(temp_set)
+
+# OUTPUT:
+# set()
+
+
+# ==========================================
+# copy() Method
+# ==========================================
+
+print("\nUsing copy() Method")
+
+original_set = {1, 2, 3}
+
+copied_set = original_set.copy()
+
+print("Original Set :", original_set)
+
+print("Copied Set :", copied_set)
+
+# OUTPUT:
+# Original Set : {1, 2, 3}
+# Copied Set : {1, 2, 3}
+
+
+# ==========================================
+# union() Method
+# ==========================================
+
+print("\nUsing union() Method")
+
+set1 = {1, 2, 3}
+
+set2 = {3, 4, 5}
+
+union_set = set1.union(set2)
+
+print(union_set)
+
+# OUTPUT:
+# {1, 2, 3, 4, 5}
+
+
+# ==========================================
+# intersection() Method
+# ==========================================
+
+print("\nUsing intersection() Method")
+
+intersection_set = set1.intersection(set2)
+
+print(intersection_set)
+
+# OUTPUT:
+# {3}
+
+
+# ==========================================
+# difference() Method
+# ==========================================
+
+print("\nUsing difference() Method")
+
+difference_set = set1.difference(set2)
+
+print(difference_set)
+
+# OUTPUT:
+# {1, 2}
+
+
+# ==========================================
+# symmetric_difference() Method
+# ==========================================
+
+print("\nUsing symmetric_difference() Method")
+
+symmetric_diff_set = set1.symmetric_difference(set2)
+
+print(symmetric_diff_set)
+
+# OUTPUT:
+# {1, 2, 4, 5}
+
+
+# ==========================================
+# issubset() Method
+# ==========================================
+
+print("\nUsing issubset() Method")
+
+set_a = {1, 2}
+
+set_b = {1, 2, 3, 4}
+
+print(set_a.issubset(set_b))
+
+# OUTPUT:
+# True
+
+
+# ==========================================
+# issuperset() Method
+# ==========================================
+
+print("\nUsing issuperset() Method")
+
+print(set_b.issuperset(set_a))
+
+# OUTPUT:
+# True
+
+
+# ==========================================
+# Set Iteration
+# ==========================================
+
+print("\nIterating Through Set")
+
+for item in set_b:
+
+    print(item)
+
+# OUTPUT:
+# 1
+# 2
+# 3
+# 4
+
+
+# ==========================================
+# Important Learning
+# ==========================================
+
+"""
+Key Features of Sets:
+
+✅ Stores Unique Values
+✅ Unordered Collection
+✅ Mutable Data Type
+✅ Fast Membership Checking
+✅ Useful for Mathematical Operations
+
+Widely Used In:
+✔ Data Science
+✔ AI / Machine Learning
+✔ Automation Testing
+✔ Backend Development
+✔ Data Processing
+"""
