@@ -1,0 +1,295 @@
+# ==========================================
+# Python Functions Practice Program
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+
+# ==========================================
+# What is a Function?
+# ==========================================
+
+"""
+A Function is a reusable block of code
+that performs a specific task.
+
+Advantages:
+✅ Code Reusability
+✅ Better Readability
+✅ Reduces Code Duplication
+✅ Easier Maintenance
+"""
+
+
+# ==========================================
+# Simple Function Example
+# ==========================================
+
+print("===== Simple Function Example =====")
+
+
+# Function Definition
+def greet():
+
+    print("Welcome to Python Functions!")
+
+
+# Function Call
+greet()
+
+# OUTPUT:
+# Welcome to Python Functions!
+
+
+# ==========================================
+# Function with Parameters
+# ==========================================
+
+print("\n===== Function with Parameters =====")
+
+
+def student_details(name, marks):
+
+    print(f"Student Name : {name}")
+
+    print(f"Student Marks : {marks}")
+
+
+# Function Call
+student_details("Sumit", 95)
+
+# OUTPUT:
+# Student Name : Sumit
+# Student Marks : 95
+
+
+# ==========================================
+# Function with Return Value
+# ==========================================
+
+print("\n===== Function with Return Value =====")
+
+
+def addition(a, b):
+
+    return a + b
+
+
+# Store returned value
+result = addition(10, 20)
+
+print("Addition Result :", result)
+
+# OUTPUT:
+# Addition Result : 30
+
+
+# ==========================================
+# Function with Default Arguments
+# ==========================================
+
+print("\n===== Function with Default Arguments =====")
+
+
+def country_name(country="India"):
+
+    print("Country Name :", country)
+
+
+country_name()
+
+country_name("USA")
+
+# OUTPUT:
+# Country Name : India
+# Country Name : USA
+
+
+# ==========================================
+# Keyword Arguments
+# ==========================================
+
+print("\n===== Keyword Arguments =====")
+
+
+def employee_details(name, department):
+
+    print(f"Employee Name : {name}")
+
+    print(f"Department : {department}")
+
+
+# Passing arguments using keywords
+employee_details(department="Testing",
+                 name="Sumit")
+
+# OUTPUT:
+# Employee Name : Sumit
+# Department : Testing
+
+
+# ==========================================
+# Arbitrary Arguments (*args)
+# ==========================================
+
+print("\n===== Arbitrary Arguments (*args) =====")
+
+
+def total_marks(*marks):
+
+    print("Marks Received :", marks)
+
+    print("Total Marks :", sum(marks))
+
+
+total_marks(78, 89, 90, 95)
+
+# OUTPUT:
+# Marks Received : (78, 89, 90, 95)
+# Total Marks : 352
+
+
+# ==========================================
+# Arbitrary Keyword Arguments (**kwargs)
+# ==========================================
+
+print("\n===== Arbitrary Keyword Arguments (**kwargs) =====")
+
+
+def student_information(**data):
+
+    for key, value in data.items():
+
+        print(f"{key} : {value}")
+
+
+student_information(
+    Name="Sumit",
+    Marks=98,
+    Grade="A+"
+)
+
+# OUTPUT:
+# Name : Sumit
+# Marks : 98
+# Grade : A+
+
+
+# ==========================================
+# Lambda Function
+# ==========================================
+
+print("\n===== Lambda Function =====")
+
+
+# Anonymous Function
+square = lambda x: x**2
+
+print("Square of 5 :", square(5))
+
+# OUTPUT:
+# Square of 5 : 25
+
+
+# ==========================================
+# Recursive Function
+# ==========================================
+
+print("\n===== Recursive Function =====")
+
+
+def factorial(number):
+
+    if number == 1:
+
+        return 1
+
+    else:
+
+        return number * factorial(number - 1)
+
+
+print("Factorial of 5 :", factorial(5))
+
+# OUTPUT:
+# Factorial of 5 : 120
+
+
+# ==========================================
+# Function Inside Function
+# ==========================================
+
+print("\n===== Nested Function =====")
+
+
+def outer_function():
+
+    print("Inside Outer Function")
+
+    def inner_function():
+
+        print("Inside Inner Function")
+
+    inner_function()
+
+
+outer_function()
+
+# OUTPUT:
+# Inside Outer Function
+# Inside Inner Function
+
+
+# ==========================================
+# Even or Odd using Function
+# ==========================================
+
+print("\n===== Even or Odd Function =====")
+
+
+def check_even_odd(number):
+
+    if number % 2 == 0:
+
+        return "Even Number"
+
+    else:
+
+        return "Odd Number"
+
+
+print(check_even_odd(10))
+
+print(check_even_odd(7))
+
+# OUTPUT:
+# Even Number
+# Odd Number
+
+
+# ==========================================
+# Important Learning
+# ==========================================
+
+"""
+Types of Functions Covered:
+
+✅ Simple Function
+✅ Function with Parameters
+✅ Return Function
+✅ Default Arguments
+✅ Keyword Arguments
+✅ *args
+✅ **kwargs
+✅ Lambda Function
+✅ Recursive Function
+✅ Nested Function
+
+Functions are widely used in:
+✔ Automation Testing
+✔ Backend Development
+✔ AI / Machine Learning
+✔ Data Science
+✔ Web Development
+"""
