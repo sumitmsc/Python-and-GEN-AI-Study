@@ -1,0 +1,152 @@
+# ==========================================
+# English to Hindi Translator
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+# ==========================================
+# Example 1:
+# Function Calling WITHOUT Main Function
+# ==========================================
+
+print("===== Function Calling Without Main Function =====")
+
+
+def english_word(english_text):
+
+    if english_text.lower() == "help":
+
+        print(
+            f"English word '{english_text}' "
+            f"means 'Madad' in Hindi"
+        )
+
+    elif english_text.lower() == "hello":
+
+        print(
+            f"English word '{english_text}' "
+            f"means 'Namaste' in Hindi"
+        )
+
+    else:
+
+        print("Word not found in dictionary")
+
+
+# Direct Function Call
+english_text = "Hello"
+
+english_word(english_text)
+
+# OUTPUT:
+# English word 'Hello' means 'Namaste' in Hindi
+
+
+# ==========================================
+# Example 2:
+# Function Calling WITH Main Function
+# ==========================================
+
+print("\n===== Function Calling With Main Function =====")
+
+
+def english_to_hindi(english_text):
+
+    if english_text.lower() == "help":
+
+        print(
+            f"English word '{english_text}' "
+            f"means 'Madad' in Hindi"
+        )
+
+    elif english_text.lower() == "hello":
+
+        print(
+            f"English word '{english_text}' "
+            f"means 'Namaste' in Hindi"
+        )
+
+    else:
+
+        print("Word not found in dictionary")
+
+
+if __name__ == "__main__":
+
+    english_text = "help"
+
+    english_to_hindi(english_text)
+
+# OUTPUT:
+# English word 'help' means 'Madad' in Hindi
+
+
+# ==========================================
+# Better Approach Using Dictionary
+# ==========================================
+
+print("\n===== Dictionary Based Translator =====")
+
+
+def translate_word(word):
+
+    hindi_dictionary = {
+        "help": "Madad",
+        "hello": "Namaste",
+        "welcome": "Swagat",
+        "thank you": "Dhanyavaad"
+    }
+
+    meaning = hindi_dictionary.get(word.lower())
+
+    if meaning:
+
+        print(
+            f"English word '{word}' "
+            f"means '{meaning}' in Hindi"
+        )
+
+    else:
+
+        print("Word not found in dictionary")
+
+
+translate_word("Welcome")
+
+# OUTPUT:
+# English word 'Welcome' means 'Swagat' in Hindi
+
+
+# ==========================================
+# Important Learning
+# ==========================================
+
+"""
+Function Calling Without Main Function:
+--------------------------------------
+Function executes immediately when
+the script runs.
+
+Function Calling With Main Function:
+-----------------------------------
+Uses:
+
+if __name__ == "__main__":
+
+This ensures code runs only when the
+file is executed directly.
+
+Dictionary-Based Approach:
+--------------------------
+Best for handling large numbers of
+words efficiently.
+
+Concepts Covered:
+✅ Functions
+✅ if-elif-else
+✅ String Methods
+✅ Dictionary Lookup
+✅ Main Function
+✅ Mini Translator Project
+"""
