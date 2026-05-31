@@ -1,0 +1,187 @@
+# ==========================================
+# Python Functions Examples
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+# ==========================================
+# Function with Single Parameter
+# ==========================================
+
+print("===== Single Parameter Function =====")
+
+
+def single_parameter(number):
+    """
+    Function accepts a single parameter
+    and returns the same value.
+    """
+
+    print("I am inside the function.")
+    print("Received value :", number)
+
+    return number
+
+
+# Function Call
+result = single_parameter(3)
+
+print("I am in main function.")
+print("Output is :", result)
+
+# OUTPUT:
+# I am inside the function.
+# Received value : 3
+# I am in main function.
+# Output is : 3
+
+
+# ==========================================
+# Function with Multiple Parameters
+# ==========================================
+
+print("\n===== Multiple Parameter Function =====")
+
+
+def add_numbers(a, b):
+    """
+    Function accepts two parameters
+    and returns their sum.
+    """
+
+    print("I am inside the function.")
+    print(f"Value of a = {a}")
+    print(f"Value of b = {b}")
+
+    return a + b
+
+
+addition_result = add_numbers(3, 4)
+
+print("I am in main function.")
+print("Addition Result :", addition_result)
+
+# OUTPUT:
+# Addition Result : 7
+
+
+# ==========================================
+# Arbitrary Arguments (*args)
+# ==========================================
+
+print("\n===== Arbitrary Arguments (*args) =====")
+
+
+def all_sum(*numbers):
+    """
+    Accepts multiple arguments
+    and calculates total sum.
+    """
+
+    total = 0
+
+    for number in numbers:
+
+        total += number
+
+        print("Running Total :", total)
+
+    return total
+
+
+total_sum = all_sum(1, 2, 3, 4, 5)
+
+print("Final Sum :", total_sum)
+
+# OUTPUT:
+# Running Total : 1
+# Running Total : 3
+# Running Total : 6
+# Running Total : 10
+# Running Total : 15
+# Final Sum : 15
+
+
+# ==========================================
+# Arbitrary Keyword Arguments (**kwargs)
+# ==========================================
+
+print("\n===== Keyword Arguments (**kwargs) =====")
+
+
+def student_information(**details):
+    """
+    Accepts multiple key-value pairs.
+    """
+
+    for key, value in details.items():
+
+        print(f"{key} : {value}")
+
+
+student_information(
+    Name="Amit",
+    Marks=80,
+    Grade="A"
+)
+
+# OUTPUT:
+# Name : Amit
+# Marks : 80
+# Grade : A
+
+
+# ==========================================
+# Default Parameter Function
+# ==========================================
+
+print("\n===== Default Parameter Function =====")
+
+
+def welcome_message(name="Guest"):
+    """
+    Demonstrates default parameters.
+    """
+
+    print(f"Welcome {name}!")
+
+
+welcome_message()
+
+welcome_message("Sumit")
+
+# OUTPUT:
+# Welcome Guest!
+# Welcome Sumit!
+
+
+# ==========================================
+# Important Learning
+# ==========================================
+
+"""
+Types of Functions Covered:
+
+✅ Single Parameter Function
+✅ Multiple Parameter Function
+✅ Function Returning Value
+✅ Arbitrary Arguments (*args)
+✅ Arbitrary Keyword Arguments (**kwargs)
+✅ Default Parameters
+
+Benefits of Functions:
+
+✔ Code Reusability
+✔ Better Readability
+✔ Easier Maintenance
+✔ Modular Programming
+
+Widely Used In:
+
+✅ Automation Testing
+✅ Backend Development
+✅ AI / Machine Learning
+✅ Data Science
+✅ Web Development
+"""
