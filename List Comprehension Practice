@@ -1,0 +1,196 @@
+# ==========================================
+# Python Enumerate and List Comprehension
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+# ==========================================
+# Creating a List
+# ==========================================
+
+numbers_list = [1, 2, 2, 2, 2, 3, 4, 5, 6, 7]
+
+print("Original List :", numbers_list)
+
+# OUTPUT:
+# Original List : [1, 2, 2, 2, 2, 3, 4, 5, 6, 7]
+
+
+# ==========================================
+# Enumerate Function
+# ==========================================
+
+print("\n===== Enumerate Example =====")
+
+for index, value in enumerate(numbers_list):
+
+    print(f"Value at index {index} is {value}")
+
+# OUTPUT:
+# Value at index 0 is 1
+# Value at index 1 is 2
+# ...
+
+
+# ==========================================
+# List Comprehension
+# ==========================================
+
+"""
+List Comprehension is a concise and
+readable way to create lists in Python.
+
+General Syntax:
+
+[expression for item in iterable]
+"""
+
+
+# ==========================================
+# Without List Comprehension
+# ==========================================
+
+print("\n===== Without List Comprehension =====")
+
+numbers = [1, 2, 3, 4, 5, 6]
+
+squares = []
+
+for number in numbers:
+
+    squares.append(number ** 2)
+
+print("Square List :", squares)
+
+# OUTPUT:
+# [1, 4, 9, 16, 25, 36]
+
+
+# ==========================================
+# With List Comprehension
+# ==========================================
+
+print("\n===== With List Comprehension =====")
+
+square_list = [number ** 2 for number in numbers]
+
+print(f"Square of {numbers} is {square_list}")
+
+# OUTPUT:
+# [1, 4, 9, 16, 25, 36]
+
+
+# ==========================================
+# Even Numbers Square
+# ==========================================
+
+even_square_list = [
+    number ** 2
+    for number in numbers
+    if number % 2 == 0
+]
+
+print("Even Number Squares :", even_square_list)
+
+# OUTPUT:
+# [4, 16, 36]
+
+
+# ==========================================
+# Odd Numbers Square
+# ==========================================
+
+odd_square_list = [
+    number ** 2
+    for number in numbers
+    if number % 2 != 0
+]
+
+print("Odd Number Squares :", odd_square_list)
+
+# OUTPUT:
+# [1, 9, 25]
+
+
+# ==========================================
+# Finding Length of Words
+# ==========================================
+
+words = [
+    "amit",
+    "sumit",
+    "jimit",
+    "testing",
+    "development"
+]
+
+word_lengths = [len(word) for word in words]
+
+print("\nWord Lengths :", word_lengths)
+
+# OUTPUT:
+# [4, 5, 5, 7, 11]
+
+
+# ==========================================
+# Enumerating Word Lengths
+# ==========================================
+
+for index, length in enumerate(word_lengths):
+
+    print(
+        f"Length of word at "
+        f"index {index} is {length}"
+    )
+
+
+# ==========================================
+# Enumerate with Start Value
+# ==========================================
+
+print("\n===== Enumerate with Start=1 =====")
+
+for index, word in enumerate(words, start=1):
+
+    print(
+        f"Word {index}: "
+        f"{word} "
+        f"(Length = {len(word)})"
+    )
+
+# OUTPUT:
+# Word 1: amit (Length = 4)
+# Word 2: sumit (Length = 5)
+# Word 3: jimit (Length = 5)
+# Word 4: testing (Length = 7)
+# Word 5: development (Length = 11)
+
+
+# ==========================================
+# Important Learning
+# ==========================================
+
+"""
+Concepts Covered:
+
+✅ enumerate()
+✅ List Comprehension
+✅ Conditional List Comprehension
+✅ String Length Calculation
+✅ Looping Through Lists
+
+Advantages of List Comprehension:
+
+✔ Cleaner Code
+✔ Better Readability
+✔ Faster Execution
+✔ Pythonic Approach
+
+Used In:
+
+✅ Automation Testing
+✅ Data Science
+✅ AI / Machine Learning
+✅ Backend Development
+"""
