@@ -1,0 +1,203 @@
+# ==========================================
+# Python List Slicing and List Methods
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+# ==========================================
+# Creating a List
+# ==========================================
+
+lists = [1, 2, 2, 2, 2, 3, 4, 5, 6, 7]
+
+print("Original List :", lists)
+
+# OUTPUT:
+# [1, 2, 2, 2, 2, 3, 4, 5, 6, 7]
+
+
+# ==========================================
+# List Slicing Examples
+# ==========================================
+
+# Every second element
+sl1 = lists[::2]
+
+print("\nSlicing [::2] :", sl1)
+
+# OUTPUT:
+# [1, 2, 2, 4, 6]
+
+
+# Reverse traversal with step size 2
+sl2 = lists[::-2]
+
+print("Slicing [::-2] :", sl2)
+
+# OUTPUT:
+# [7, 5, 3, 2, 2]
+
+
+# ==========================================
+# List Methods
+# ==========================================
+
+"""
+List Methods Covered:
+
+1. append()  -> Add element at end
+2. insert()  -> Insert element at specific index
+3. remove()  -> Remove first occurrence of element
+4. pop()     -> Remove element by index
+5. count()   -> Count occurrences of element
+6. sort()    -> Sort list in ascending order
+7. clear()   -> Remove all elements
+8. index()   -> Find index of element
+9. reverse() -> Reverse list order
+"""
+
+
+# ==========================================
+# append()
+# ==========================================
+
+lists.append(2)
+
+print("\nAfter append(2) :", lists)
+
+# OUTPUT:
+# [1, 2, 2, 2, 2, 3, 4, 5, 6, 7, 2]
+
+
+# ==========================================
+# remove()
+# ==========================================
+
+lists.remove(6)
+
+print("After remove(6) :", lists)
+
+# OUTPUT:
+# Removes first occurrence of 6
+
+
+# ==========================================
+# insert()
+# ==========================================
+
+lists.insert(10, 9)
+
+print("After insert(10, 9) :", lists)
+
+# OUTPUT:
+# Inserts 9 at index 10
+
+
+# ==========================================
+# pop()
+# ==========================================
+
+removed_value = lists.pop(2)
+
+print("Removed Value :", removed_value)
+
+print("After pop(2) :", lists)
+
+# OUTPUT:
+# Removes element at index 2
+
+
+# ==========================================
+# sort()
+# ==========================================
+
+lists.sort()
+
+print("Sorted List :", lists)
+
+# OUTPUT:
+# List sorted in ascending order
+
+
+# ==========================================
+# reverse()
+# ==========================================
+
+lists.reverse()
+
+print("Reversed List :", lists)
+
+# OUTPUT:
+# List sorted in descending order
+
+
+# ==========================================
+# index()
+# ==========================================
+
+index_value = lists.index(1)
+
+print("Index of 1 :", index_value)
+
+# OUTPUT:
+# Returns position of element 1
+
+
+# ==========================================
+# count()
+# ==========================================
+
+count_value = lists.count(2)
+
+print("Count of 2 :", count_value)
+
+# OUTPUT:
+# Total occurrences of value 2
+
+
+# ==========================================
+# clear()
+# ==========================================
+
+lists.clear()
+
+print("List after clear() :", lists)
+
+# OUTPUT:
+# []
+
+
+# ==========================================
+# Important Learning
+# ==========================================
+
+"""
+Python Lists:
+
+✅ Ordered Collection
+✅ Mutable Data Type
+✅ Supports Duplicate Values
+✅ Supports Indexing
+✅ Supports Slicing
+
+Most Common Methods:
+
+append()   -> Add element
+insert()   -> Insert element
+remove()   -> Remove element
+pop()      -> Remove by index
+count()    -> Count occurrences
+sort()     -> Sort list
+reverse()  -> Reverse list
+index()    -> Find element index
+clear()    -> Remove all elements
+
+Applications:
+
+✔ Data Processing
+✔ Automation Testing
+✔ Data Science
+✔ AI / Machine Learning
+✔ Backend Development
+"""
