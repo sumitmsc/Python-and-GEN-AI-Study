@@ -1,0 +1,114 @@
+# ==========================================
+# Multiplication Table Using Nested Loops
+# vs List Comprehension
+# Author : Sumit Shrivastav
+# ==========================================
+
+print("Start small. Ship something.\n")
+
+# ==========================================
+# Method 1: Nested Loops
+# ==========================================
+
+print("===== Method 1: Nested Loops =====")
+
+table = []
+
+for i in range(1, 6):
+
+    row = []
+
+    for j in range(1, 6):
+
+        row.append(i * j)
+
+    table.append(row)
+
+print("Multiplication Table Using Nested Loops:\n")
+
+for row in table:
+
+    print(row)
+
+# OUTPUT:
+# [1, 2, 3, 4, 5]
+# [2, 4, 6, 8, 10]
+# [3, 6, 9, 12, 15]
+# [4, 8, 12, 16, 20]
+# [5, 10, 15, 20, 25]
+
+
+# ==========================================
+# Method 2: List Comprehension
+# ==========================================
+
+print("\n===== Method 2: List Comprehension =====")
+
+table_comprehension = [
+    [i * j for j in range(1, 6)]
+    for i in range(1, 6)
+]
+
+print("Multiplication Table Using List Comprehension:\n")
+
+for row in table_comprehension:
+
+    print(row)
+
+# OUTPUT:
+# [1, 2, 3, 4, 5]
+# [2, 4, 6, 8, 10]
+# [3, 6, 9, 12, 15]
+# [4, 8, 12, 16, 20]
+# [5, 10, 15, 20, 25]
+
+
+# ==========================================
+# Comparison
+# ==========================================
+
+print("\n===== Comparison =====")
+
+print("Nested Loops Output == List Comprehension Output ?")
+
+print(table == table_comprehension)
+
+# OUTPUT:
+# True
+
+
+# ==========================================
+# Important Learning
+# ==========================================
+
+"""
+Nested Loops:
+
+✔ Easy to understand
+✔ Beginner Friendly
+✔ Good for learning logic
+
+List Comprehension:
+
+✔ Shorter Code
+✔ More Pythonic
+✔ Better Readability
+✔ Often Faster
+
+Concepts Covered:
+
+✅ Nested Loops
+✅ Nested Lists
+✅ List Comprehension
+✅ Matrix Creation
+✅ Multiplication Table
+✅ Comparison of Approaches
+
+Applications:
+
+✔ Data Science
+✔ AI / Machine Learning
+✔ Matrix Operations
+✔ Backend Development
+✔ Automation Testing
+"""
