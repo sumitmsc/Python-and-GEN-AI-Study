@@ -1,0 +1,130 @@
+"""
+Author: Sumit Anil Shrivastav
+Topic: Python filter(), map(), and reduce()
+Description:
+This program demonstrates the usage of Python's built-in
+functional programming tools:
+1. filter() - Select data based on a condition
+2. map() - Transform data
+3. reduce() - Aggregate data into a single value
+
+Suitable for beginners and interview preparation.
+"""
+
+from functools import reduce
+
+# ----------------------------------------------------
+# Sample Data
+# ----------------------------------------------------
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print("Original List:")
+print(numbers)
+
+# ====================================================
+# FILTER EXAMPLE
+# ====================================================
+# filter() returns elements that satisfy a condition.
+# Here we keep only even numbers.
+
+even_numbers = list(
+    filter(
+        lambda number: number % 2 == 0,
+        numbers
+    )
+)
+
+print("\nUsing filter()")
+print("Even Numbers:", even_numbers)
+
+# ====================================================
+# MAP EXAMPLE
+# ====================================================
+# map() applies a function to every element.
+# Here we calculate squares of all numbers.
+
+squared_numbers = list(
+    map(
+        lambda number: number ** 2,
+        numbers
+    )
+)
+
+print("\nUsing map()")
+print("Squared Numbers:", squared_numbers)
+
+# ====================================================
+# REDUCE EXAMPLE
+# ====================================================
+# reduce() combines all elements into one result.
+# Here we calculate the total sum.
+
+total_sum = reduce(
+    lambda x, y: x + y,
+    numbers
+)
+
+print("\nUsing reduce()")
+print("Sum of Numbers:", total_sum)
+
+# ====================================================
+# COMBINED EXAMPLE
+# ====================================================
+# Find square of even numbers and calculate their sum.
+#
+# Step 1: Filter Even Numbers
+# Step 2: Square Each Number
+# Step 3: Sum All Squares
+
+result = reduce(
+    lambda x, y: x + y,
+    map(
+        lambda number: number ** 2,
+        filter(
+            lambda number: number % 2 == 0,
+            numbers
+        )
+    )
+)
+
+print("\nCombined Example")
+print("Sum of Squares of Even Numbers:", result)
+
+# ====================================================
+# PYTHONIC APPROACH (RECOMMENDED)
+# ====================================================
+# Most Python developers prefer list comprehensions.
+
+pythonic_result = sum(
+    number ** 2
+    for number in numbers
+    if number % 2 == 0
+)
+
+print("\nPythonic Approach")
+print("Sum of Squares of Even Numbers:", pythonic_result)
+
+# ====================================================
+# EXPECTED OUTPUT
+# ====================================================
+#
+# Original List:
+# [1,2,3,4,5,6,7,8,9,10]
+#
+# Using filter()
+# Even Numbers: [2,4,6,8,10]
+#
+# Using map()
+# Squared Numbers:
+# [1,4,9,16,25,36,49,64,81,100]
+#
+# Using reduce()
+# Sum of Numbers: 55
+#
+# Combined Example
+# Sum of Squares of Even Numbers: 220
+#
+# Pythonic Approach
+# Sum of Squares of Even Numbers: 220
+#
