@@ -1,0 +1,141 @@
+"""
+Project: Train Ticket Booking System
+Author: Sumit Anil Shrivastav
+Description:
+A beginner-friendly Python project demonstrating:
+1. Variables
+2. Lists
+3. Dictionaries
+4. Functions
+5. Loops
+6. Conditional Statements
+7. User Input
+8. String Formatting
+
+GitHub Repository:
+python-train-ticket-booking-system
+"""
+
+# -------------------------------
+# Train Data
+# -------------------------------
+
+trains = [
+    {"train_no": 101, "name": "Rajdhani Express", "fare": 1500},
+    {"train_no": 102, "name": "Duronto Express", "fare": 1200},
+    {"train_no": 103, "name": "Vande Bharat", "fare": 1800},
+    {"train_no": 104, "name": "Shatabdi Express", "fare": 1000}
+]
+
+
+# -------------------------------
+# Function to Display Trains
+# -------------------------------
+
+def display_trains():
+    print("\nAvailable Trains")
+    print("-" * 60)
+
+    for train in trains:
+        print(
+            f"Train No: {train['train_no']} | "
+            f"Train Name: {train['name']} | "
+            f"Fare: ₹{train['fare']}"
+        )
+
+
+# -------------------------------
+# Function to Book Ticket
+# -------------------------------
+
+def book_ticket():
+
+    # Display train list
+    display_trains()
+
+    # Take user inputs
+    passenger_name = input("\nEnter Passenger Name: ")
+    age = int(input("Enter Passenger Age: "))
+    train_number = int(input("Enter Train Number: "))
+    seats = int(input("Enter Number of Seats: "))
+
+    # Variable to store selected train
+    selected_train = None
+
+    # Search train in train list
+    for train in trains:
+        if train["train_no"] == train_number:
+            selected_train = train
+            break
+
+    # If train found
+    if selected_train:
+
+        # Calculate total fare
+        total_fare = selected_train["fare"] * seats
+
+        # Display ticket
+        print("\n" + "=" * 60)
+        print("        TRAIN TICKET CONFIRMATION")
+        print("=" * 60)
+
+        print(f"Passenger Name : {passenger_name}")
+        print(f"Age            : {age}")
+        print(f"Train Number   : {selected_train['train_no']}")
+        print(f"Train Name     : {selected_train['name']}")
+        print(f"Seats Booked   : {seats}")
+        print(f"Fare Per Seat  : ₹{selected_train['fare']}")
+        print(f"Total Fare     : ₹{total_fare}")
+
+        print("=" * 60)
+        print("Ticket Booked Successfully!")
+        print("=" * 60)
+
+    # If train not found
+    else:
+        print("\nInvalid Train Number. Please try again.")
+
+
+# -------------------------------
+# Main Program
+# -------------------------------
+
+print("=" * 60)
+print("      WELCOME TO PYTHON TRAIN BOOKING SYSTEM")
+print("=" * 60)
+
+book_ticket()
+
+"""
+Sample Output
+------------------------------------------------------------
+
+WELCOME TO PYTHON TRAIN BOOKING SYSTEM
+
+Available Trains
+
+Train No: 101 | Train Name: Rajdhani Express | Fare: ₹1500
+Train No: 102 | Train Name: Duronto Express | Fare: ₹1200
+Train No: 103 | Train Name: Vande Bharat | Fare: ₹1800
+Train No: 104 | Train Name: Shatabdi Express | Fare: ₹1000
+
+Enter Passenger Name: Sumit
+Enter Passenger Age: 35
+Enter Train Number: 103
+Enter Number of Seats: 2
+
+============================================================
+TRAIN TICKET CONFIRMATION
+============================================================
+Passenger Name : Sumit
+Age            : 35
+Train Number   : 103
+Train Name     : Vande Bharat
+Seats Booked   : 2
+Fare Per Seat  : ₹1800
+Total Fare     : ₹3600
+============================================================
+Ticket Booked Successfully!
+============================================================
+
+"""
