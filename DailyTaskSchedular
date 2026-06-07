@@ -1,0 +1,127 @@
+"""
+Project: Daily Task Automation Assistant
+Author: Sumit Anil Shrivastav
+
+Description:
+This script automates common daily activities:
+1. Creates a daily work log.
+2. Organizes text files into a Documents folder.
+3. Opens frequently used websites.
+4. Saves reminders.
+5. Displays current date and time.
+
+Modules Used:
+- os
+- shutil
+- webbrowser
+- datetime
+"""
+
+import os
+import shutil
+import webbrowser
+from datetime import datetime
+
+# ------------------------------
+# Function 1: Display Date & Time
+# ------------------------------
+def show_datetime():
+    current_time = datetime.now()
+    print("\nCurrent Date & Time:")
+    print(current_time.strftime("%d-%m-%Y %H:%M:%S"))
+
+
+# ------------------------------
+# Function 2: Create Daily Log
+# ------------------------------
+def create_daily_log():
+    filename = f"work_log_{datetime.now().strftime('%Y%m%d')}.txt"
+
+    with open(filename, "w") as file:
+        file.write("Daily Work Log\n")
+        file.write("=" * 30 + "\n")
+        file.write(f"Created on: {datetime.now()}\n")
+
+    print(f"\nDaily log created: {filename}")
+
+
+# ------------------------------
+# Function 3: Organize Text Files
+# ------------------------------
+def organize_files():
+    destination_folder = "Documents"
+
+    if not os.path.exists(destination_folder):
+        os.mkdir(destination_folder)
+
+    for file in os.listdir():
+        if file.endswith(".txt") and os.path.isfile(file):
+            shutil.move(file, os.path.join(destination_folder, file))
+
+    print("\nText files organized successfully.")
+
+
+# ------------------------------
+# Function 4: Open Useful Websites
+# ------------------------------
+def open_websites():
+    websites = [
+        "https://github.com",
+        "https://www.linkedin.com",
+        "https://chat.openai.com"
+    ]
+
+    for site in websites:
+        webbrowser.open(site)
+
+    print("\nWebsites opened successfully.")
+
+
+# ------------------------------
+# Function 5: Save Reminder
+# ------------------------------
+def save_reminder():
+    reminder = input("\nEnter your reminder: ")
+
+    with open("reminders.txt", "a") as file:
+        file.write(f"{datetime.now()} - {reminder}\n")
+
+    print("Reminder saved successfully.")
+
+
+# ------------------------------
+# Main Program
+# ------------------------------
+while True:
+
+    print("\n===== Daily Task Automation Assistant =====")
+    print("1. Show Date & Time")
+    print("2. Create Daily Work Log")
+    print("3. Organize Text Files")
+    print("4. Open Useful Websites")
+    print("5. Save Reminder")
+    print("6. Exit")
+
+    choice = input("\nEnter your choice: ")
+
+    if choice == "1":
+        show_datetime()
+
+    elif choice == "2":
+        create_daily_log()
+
+    elif choice == "3":
+        organize_files()
+
+    elif choice == "4":
+        open_websites()
+
+    elif choice == "5":
+        save_reminder()
+
+    elif choice == "6":
+        print("\nThank you for using Daily Task Automation Assistant.")
+        break
+
+    else:
+        print("\nInvalid choice. Please try again.")
