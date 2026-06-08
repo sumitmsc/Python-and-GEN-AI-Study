@@ -1,0 +1,96 @@
+"""
+Simple Banking System
+Author: Sumit Shrivastav
+
+Features:
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+
+This program is created for Python practice and GitHub learning projects.
+"""
+
+# Initial balance
+balance = 10000
+
+# Store transaction history
+transactions = []
+
+def check_balance():
+    """Display current account balance"""
+    print(f"\nCurrent Balance: ₹{balance}")
+
+
+def deposit():
+    """Deposit money into account"""
+    global balance
+
+    amount = float(input("Enter amount to deposit: ₹"))
+
+    if amount > 0:
+        balance += amount
+        transactions.append(f"Deposited ₹{amount}")
+        print(f"₹{amount} deposited successfully.")
+    else:
+        print("Invalid amount.")
+
+
+def withdraw():
+    """Withdraw money from account"""
+    global balance
+
+    amount = float(input("Enter amount to withdraw: ₹"))
+
+    if amount <= 0:
+        print("Invalid amount.")
+    elif amount > balance:
+        print("Insufficient balance.")
+    else:
+        balance -= amount
+        transactions.append(f"Withdrawn ₹{amount}")
+        print(f"₹{amount} withdrawn successfully.")
+
+
+def transaction_history():
+    """Display all transactions"""
+    print("\nTransaction History")
+
+    if not transactions:
+        print("No transactions found.")
+    else:
+        for index, transaction in enumerate(transactions, start=1):
+            print(f"{index}. {transaction}")
+
+
+# Main Program Loop
+while True:
+
+    print("\n===== BANKING SYSTEM =====")
+    print("1. Check Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Transaction History")
+    print("5. Exit")
+
+    choice = input("Enter your choice (1-5): ")
+
+    if choice == "1":
+        check_balance()
+
+    elif choice == "2":
+        deposit()
+
+    elif choice == "3":
+        withdraw()
+
+    elif choice == "4":
+        transaction_history()
+
+    elif choice == "5":
+        print("\nThank you for using Banking System.")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
