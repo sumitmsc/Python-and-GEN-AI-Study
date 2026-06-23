@@ -1,0 +1,35 @@
+"""
+OOPs Concept in Python
+Author: Sumit Shrivastav
+
+This program demonstrates:
+1. Class
+2. Object
+3. Constructor
+4. Encapsulation
+5. Method Calling
+"""
+
+
+# Creating a Class
+class Employee:
+    """
+    Employee class to store employee details.
+    """
+
+    # Constructor
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+    # Method to display employee information
+    def display_details(self):
+        print(f"Employee Name : {self.name}")
+        print(f"Employee Salary : ₹{self.salary}")
+
+
+# Creating an Object
+emp1 = Employee("Sumit", 50000)
+
+# Calling the Method
+emp1.display_details()
